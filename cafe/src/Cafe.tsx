@@ -178,15 +178,20 @@ const Footer = ({ isDarkMode }: { isDarkMode: boolean }) => (
       <div className="text-[#7A6050]">Praha 1, Staré Město</div>
       <div className="text-[#7A6050]">Otevřeno denně: 08:00 – 20:00</div>
     </div>
-    <div className="flex gap-2 sm:gap-3 items-center flex-wrap">
-      {["Zásady ochrany", "Podmínky služby", "Press Kit", "Kariéra"].map((t) => (
-        <span key={t} className={`cursor-pointer transition-colors ${isDarkMode ? 'text-[#B8A898] hover:text-[#F8F5E9]' : 'text-[#7A6050] hover:text-[#2C1508]'}`}>
-          {t}
+    <div className="flex flex-col gap-3 sm:gap-2 items-start sm:items-end">
+      <div className="flex gap-2 sm:gap-3 items-center flex-wrap">
+        {["Zásady ochrany", "Podmínky služby", "Press Kit", "Kariéra"].map((t) => (
+          <span key={t} className={`cursor-pointer transition-colors ${isDarkMode ? 'text-[#B8A898] hover:text-[#F8F5E9]' : 'text-[#7A6050] hover:text-[#2C1508]'}`}>
+            {t}
+          </span>
+        ))}
+        <span className="text-[#7A6050]">
+          © 2024 Gallery. Všechna práva vyhrazena.
         </span>
-      ))}
-      <span className="text-[#7A6050]">
-        © 2024 Gallery. Všechna práva vyhrazena.
-      </span>
+      </div>
+      <p className="text-xs text-stone-500 max-w-[28rem]">
+        * Tento web je fiktivní ukázkový projekt vytvořený pro portfolio.
+      </p>
     </div>
   </footer>
 );

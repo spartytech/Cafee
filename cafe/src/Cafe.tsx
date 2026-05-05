@@ -76,14 +76,19 @@ const Nav = ({
           {/* Dark Mode Toggle */}
           <button
             onClick={() => setIsDarkMode(!isDarkMode)}
-            className={`p-1.5 sm:p-2 rounded-full transition-colors duration-200 ${
+            className={`p-2 sm:p-2.5 rounded-full transition-colors duration-200 ${
               isDarkMode 
                 ? 'bg-[#3A2410] text-[#F8F5E9] hover:bg-[#4A2512]' 
                 : 'bg-[#EEE9D4] text-[#2C1508] hover:bg-[#DDD8C4]'
             }`}
             aria-label="Toggle dark mode"
           >
-            {isDarkMode ? '☀️' : '🌙'}
+            {isDarkMode ? '☀️' : (
+              <svg className="w-5 h-5 inline" fill="#999999" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="9" fill="white" />
+                <circle cx="15" cy="12" r="9" fill="#EEE9D4" />
+              </svg>
+            )}
           </button>
 
           {/* Mobile Menu Button */}
